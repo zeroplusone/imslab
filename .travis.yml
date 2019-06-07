@@ -10,3 +10,6 @@ install:
   - npm install
 script:
   - npm run build  
+after_success:
+  - git add docs/ && git commit -m "Update docs"
+  - npm run publish
